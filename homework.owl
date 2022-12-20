@@ -160,6 +160,12 @@
     
 
 
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#salahakda -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#salahakda"/>
+    
+
+
     <!-- http://www.univ-msila.dz/11/OwsOntologie#soeur -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#soeur">
