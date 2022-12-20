@@ -5,8 +5,90 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OwsOntologie="http://www.univ-msila.dz/11/OwsOntologie#">
     <owl:Ontology rdf:about="http://www.univ-msila.dz/11/OwsOntologie"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#causinDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/OwsOntologie#causinDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#enfantDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/OwsOntologie#enfantDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#enfant"/>
+        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#parent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#estMarieAvec -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/OwsOntologie#estMarieAvec">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#frereSoeurDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/OwsOntologie#frereSoeurDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#fraterie"/>
+        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#fraterie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#parentDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/OwsOntologie#parentDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#parent"/>
+        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#enfant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#personneAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.univ-msila.dz/11/OwsOntologie#personneAge">
+        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -21,6 +103,28 @@
     
 
 
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#celibataire -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#celibataire">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#estMarieAvec"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#chauffeur -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#chauffeur">
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#metier"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.univ-msila.dz/11/OwsOntologie#enfant -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#enfant">
@@ -29,10 +133,58 @@
     
 
 
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#enseignang -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#enseignang">
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#metier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#epoux -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#epoux">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#estMarieAvec"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#epouxSansEnfant -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#epouxSansEnfant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#estMarieAvec"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#enfantDe"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#etudiant -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#etudiant">
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#metier"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.univ-msila.dz/11/OwsOntologie#femme -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#femme">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#grandparent"/>
     </owl:Class>
     
 
@@ -53,15 +205,6 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/OwsOntologie#frandmere -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#frandmere">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#femme"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#grandparent"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.univ-msila.dz/11/OwsOntologie#fraterie -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#fraterie">
@@ -75,6 +218,15 @@
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#frere">
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#fraterie"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#homme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#grandmere -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#grandmere">
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#grandparent"/>
     </owl:Class>
     
 
@@ -112,12 +264,33 @@
     
 
 
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#medcin -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#medcin">
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#metier"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.univ-msila.dz/11/OwsOntologie#mere -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#mere">
+        <owl:equivalentClass rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#mereDeFilles"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#femme"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#parent"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#mereDeFilles -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#mereDeFilles"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#metier -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#metier"/>
     
 
 
@@ -137,11 +310,56 @@
     
 
 
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#parentNormal -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#parentNormal"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#parentType -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#parentType"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#parentchoye -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#parentchoye"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#parentheureux -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#parentheureux"/>
+    
+
+
     <!-- http://www.univ-msila.dz/11/OwsOntologie#pere -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#pere">
+        <owl:equivalentClass rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#pereType"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#homme"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#parent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#pereDeFamilleNombrouse -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#pereDeFamilleNombrouse"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#pereType -->
+
+    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#pereType">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#parentDe"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#fils"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -152,26 +370,132 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/OwsOntologie#personneage -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#personneage">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#personne"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/OwsOntologie#salahakda -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#salahakda"/>
-    
-
-
     <!-- http://www.univ-msila.dz/11/OwsOntologie#soeur -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/OwsOntologie#soeur">
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#femme"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#fraterie"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#ahmed -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#ahmed">
+        <OwsOntologie:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#rokaya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#amel -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#amel">
+        <rdf:type rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#etudiant"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#ahmed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#dounia -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#dounia">
+        <OwsOntologie:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#karim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#farid -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#farid">
+        <rdf:type rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#etudiant"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#karim"/>
+        <OwsOntologie:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#halima"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#hala -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#hala">
+        <OwsOntologie:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#samir"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#halima -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#halima"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#karim -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#karim">
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#ahmed"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#rokaya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#rokaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#rokaya"/>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#salim -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#salim">
+        <rdf:type rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#etudiant"/>
+        <rdf:type rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#medcin"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#karim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#samia -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#samia">
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#samir"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#samir -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#samir">
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#ahmed"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#rokaya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#selma -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#selma">
+        <rdf:type rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#medcin"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#samia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-msila.dz/11/OwsOntologie#widad -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/OwsOntologie#widad">
+        <rdf:type rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#medcin"/>
+        <OwsOntologie:enfantDe rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#samia"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
