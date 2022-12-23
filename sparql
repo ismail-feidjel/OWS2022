@@ -1,0 +1,19 @@
+les nom des etudents------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT ?nom
+	WHERE 
+	{ 
+	?a rdf:type o:etudiant .
+	?a o:nom ?nom
+	}
+
+
+les nom des uncles------------------------------------------
+les nom des etudents------------------------------------------
+les nom des etudents------------------------------------------
+les nom des etudents------------------------------------------
