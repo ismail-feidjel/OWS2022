@@ -77,7 +77,6 @@
     <!-- http://www.univ-msila.dz/11/o#frereSoeurDe -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/o#frereSoeurDe">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
         <rdfs:range rdf:resource="http://www.univ-msila.dz/11/o#fraterie"/>
@@ -392,6 +391,12 @@
     <!-- http://www.univ-msila.dz/11/o#parent -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
     </owl:Class>
     
@@ -406,6 +411,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
     </owl:Class>
     
 
@@ -414,16 +420,12 @@
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentType">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#etudiant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#etudiant"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
     </owl:Class>
     
 
@@ -432,16 +434,12 @@
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentchoye">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
     </owl:Class>
     
 
@@ -450,16 +448,12 @@
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentheureux">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
     </owl:Class>
     
 
@@ -467,17 +461,6 @@
     <!-- http://www.univ-msila.dz/11/o#pere -->
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#pere">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#pere"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
         <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
     </owl:Class>
@@ -488,16 +471,12 @@
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#pereDeFamilleNombrouse">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#pere"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#pere"/>
     </owl:Class>
     
 
@@ -506,17 +485,13 @@
 
     <owl:Class rdf:about="http://www.univ-msila.dz/11/o#pereType">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#pere"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.univ-msila.dz/11/o#fils"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.univ-msila.dz/11/o#fils"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#pere"/>
     </owl:Class>
     
 
@@ -726,7 +701,19 @@
                                 <swrl:argument2 rdf:resource="#y"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="#x"/>
+                                        <swrl:argument2 rdf:resource="#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
