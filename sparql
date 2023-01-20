@@ -8,12 +8,67 @@ PREFIX o: <http://www.univ-msila.dz/11/o#>
 SELECT ?nom
 	WHERE 
 	{ 
-	?a rdf:type o:etudiant .
-	?a o:nom ?nom
+	?nom rdf:type o:etudiant 
 	}
 
 
-les nom des uncles------------------------------------------
-les nom des etudents------------------------------------------
-les nom des etudents------------------------------------------
-les nom des etudents------------------------------------------
+les nom des novaux de ahmed------------------------------------------
+
+
+SELECT *
+	WHERE 
+	{ 
+	?a o:enfantDe o:ahmed 
+	}
+
+
+
+les nom des parents ayont au moin deux enfants------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT   ?b   ?b(COUNT(*) AS ?count)
+
+	 WHERE { ?a o:enfantDe ?b . }
+	 GROUP BY ?b
+ 	having (?count >= 2)
+	
+
+les nom des oncle de samia------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT distinct  ?d
+
+	 WHERE { o:samia o:enfantDe ?b .
+	?d rdf:type o:homme .
+	?b o:enfantDe ?c .
+	?d o:enfantDe ?c .
+	filter(?b!=?d)	
+	 }
+	
+
+
+les nom des cosin les casin de samia------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT distinct  ?cousin 
+
+	 WHERE {
+	 o:samia o:enfantDe ?b .
+	?d o:enfantDe ?c .
+	?b o:enfantDe ?c .
+	?cousin o:enfantDe ?d .
+
+	filter(?b!=?d)	
+	 }
