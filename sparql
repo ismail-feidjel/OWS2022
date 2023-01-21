@@ -8,19 +8,30 @@ PREFIX o: <http://www.univ-msila.dz/11/o#>
 SELECT ?nom
 	WHERE 
 	{ 
-	?nom rdf:type o:etudiant 
+	?uti rdf:type o:etudiant .
+	?uti o:nom ?nom
 	}
 
 
 les nom des novaux de ahmed------------------------------------------
 
 
-SELECT *
-	WHERE 
-	{ 
-	?a o:enfantDe o:ahmed 
-	}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT distinct  ?nom 
 
+	 WHERE {
+	 o:samia o:enfantDe ?parent .
+	?parent o:enfantDe ?grandparent .
+	?oncle o:enfantDe ?grandparent .
+	?oncle rdf:type o:homme .
+	?oncle o:nom ?nom
+
+	filter(?parent !=?oncle)	
+	 }
 
 
 les nom des parents ayont au moin deux enfants------------------------------------------
@@ -30,11 +41,12 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX o: <http://www.univ-msila.dz/11/o#>
-SELECT   ?b   ?b(COUNT(*) AS ?count)
+SELECT     ?nom  ?parent(COUNT(*) AS ?count_enfants)
 
-	 WHERE { ?a o:enfantDe ?b . }
-	 GROUP BY ?b
- 	having (?count >= 2)
+	 WHERE { ?enfant o:enfantDe ?parent . 
+		?parent o:nom ?nom}
+	 GROUP BY ?parent ?nom
+ 	having (?count_enfants >= 2)
 	
 
 les nom des oncle de samia------------------------------------------
@@ -62,13 +74,14 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX o: <http://www.univ-msila.dz/11/o#>
-SELECT distinct  ?cousin 
+SELECT distinct  ?nom 
 
 	 WHERE {
-	 o:samia o:enfantDe ?b .
-	?d o:enfantDe ?c .
-	?b o:enfantDe ?c .
-	?cousin o:enfantDe ?d .
+	 o:samia o:enfantDe ?parent .
+	?parent o:enfantDe ?grandparent .
+	?oncle o:enfantDe ?grandparent .
+	?cousin o:enfantDe ?oncle .
+	?cousin o:nom ?nom
 
-	filter(?b!=?d)	
+	filter(?parent !=?oncle)	
 	 }
