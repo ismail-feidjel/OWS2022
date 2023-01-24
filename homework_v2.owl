@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.univ-msila.dz/11/OwsOntologie"
-     xml:base="http://www.univ-msila.dz/11/OwsOntologie"
-     xmlns:o="http://www.univ-msila.dz/11/o#"
+<rdf:RDF xmlns="http://www.websymentique.dz/2/rticwsOntologie"
+     xml:base="http://www.websymentique.dz/2/rticwsOntologie"
+     xmlns:o="http://www.websymentique.dz/2/rtic#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,8 +10,8 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:OwsOntologie="http://www.univ-msila.dz/11/OwsOntologie#">
-    <owl:Ontology rdf:about="http://www.univ-msila.dz/11/o"/>
+     xmlns:OwsOntologie="http://www.websymentique.dz/2/rticwsOntologie#">
+    <owl:Ontology rdf:about="http://www.websymentique.dz/2/rtic"/>
     
 
 
@@ -43,53 +43,54 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#causinDe -->
+    <!-- http://www.websymentique.dz/2/rtic#causinDe -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/o#causinDe">
+    <owl:ObjectProperty rdf:about="http://www.websymentique.dz/2/rtic#causinDe">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
-        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+        <rdfs:range rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#enfantDe -->
+    <!-- http://www.websymentique.dz/2/rtic#enfantDe -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/o#enfantDe">
+    <owl:ObjectProperty rdf:about="http://www.websymentique.dz/2/rtic#enfantDe">
+        <owl:inverseOf rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#enfant"/>
-        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+        <rdfs:range rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#estMarieAvec -->
+    <!-- http://www.websymentique.dz/2/rtic#estMarieAvec -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/o#estMarieAvec">
+    <owl:ObjectProperty rdf:about="http://www.websymentique.dz/2/rtic#estMarieAvec">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
-        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+        <rdfs:range rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#frereSoeurDe -->
+    <!-- http://www.websymentique.dz/2/rtic#frereSoeurDe -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/o#frereSoeurDe">
+    <owl:ObjectProperty rdf:about="http://www.websymentique.dz/2/rtic#frereSoeurDe">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
-        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/o#fraterie"/>
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+        <rdfs:range rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#parentDe -->
+    <!-- http://www.websymentique.dz/2/rtic#parentDe -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-msila.dz/11/o#parentDe">
+    <owl:ObjectProperty rdf:about="http://www.websymentique.dz/2/rtic#parentDe">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
-        <rdfs:range rdf:resource="http://www.univ-msila.dz/11/o#enfant"/>
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+        <rdfs:range rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:ObjectProperty>
     
 
@@ -105,20 +106,20 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#nom -->
+    <!-- http://www.websymentique.dz/2/rtic#nom -->
 
-    <owl:DatatypeProperty rdf:about="http://www.univ-msila.dz/11/o#nom">
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+    <owl:DatatypeProperty rdf:about="http://www.websymentique.dz/2/rtic#nom">
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#personneAge -->
+    <!-- http://www.websymentique.dz/2/rtic#personneAge -->
 
-    <owl:DatatypeProperty rdf:about="http://www.univ-msila.dz/11/o#personneAge">
+    <owl:DatatypeProperty rdf:about="http://www.websymentique.dz/2/rtic#personneAge">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:domain rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
     </owl:DatatypeProperty>
     
@@ -135,15 +136,15 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#celibataire -->
+    <!-- http://www.websymentique.dz/2/rtic#celibataire -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#celibataire">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#celibataire">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#personne"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#personne"/>
                     <owl:Class>
-                        <owl:complementOf rdf:resource="http://www.univ-msila.dz/11/o#epoux"/>
+                        <owl:complementOf rdf:resource="http://www.websymentique.dz/2/rtic#epoux"/>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
@@ -152,268 +153,273 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#chauffeur -->
+    <!-- http://www.websymentique.dz/2/rtic#chauffeur -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#chauffeur">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#metier"/>
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#chauffeur">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#metier"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#enfant -->
+    <!-- http://www.websymentique.dz/2/rtic#enfant -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#enfant">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#enfant">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#enfantDe"/>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#enfantDe"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#enseignang -->
+    <!-- http://www.websymentique.dz/2/rtic#enseignang -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#enseignang">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#metier"/>
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#enseignang">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#metier"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#epoux -->
+    <!-- http://www.websymentique.dz/2/rtic#epoux -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#epoux">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#epoux">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#estMarieAvec"/>
-                <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#estMarieAvec"/>
+                <owl:someValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#epouxSansEnfant -->
+    <!-- http://www.websymentique.dz/2/rtic#epouxSansEnfant -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#epouxSansEnfant">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#epouxSansEnfant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#epoux"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#epoux"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+                        <owl:onClass rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#epoux"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#epoux"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#etudiant -->
+    <!-- http://www.websymentique.dz/2/rtic#etudiant -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#etudiant">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#metier"/>
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#etudiant">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#metier"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#femme -->
+    <!-- http://www.websymentique.dz/2/rtic#femme -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#femme">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
-        <owl:disjointWith rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#femme">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#fille -->
+    <!-- http://www.websymentique.dz/2/rtic#fille -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#fille">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#fille">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#enfant"/>
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#femme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#enfant"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#femme"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#enfant"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#enfant"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#fils -->
+    <!-- http://www.websymentique.dz/2/rtic#fils -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#fils">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#fils">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#enfant"/>
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#homme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#enfant"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#homme"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#enfant"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#enfant"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#fraterie -->
+    <!-- http://www.websymentique.dz/2/rtic#fraterie -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#fraterie">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#fraterie">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#frereSoeurDe"/>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#frereSoeurDe"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#frere -->
+    <!-- http://www.websymentique.dz/2/rtic#frere -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#frere">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#frere">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#fraterie"/>
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#homme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#fraterie"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#homme"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#fraterie"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#fraterie"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#grandmere -->
+    <!-- http://www.websymentique.dz/2/rtic#grandmere -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#grandmere">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#grandmere">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#mere"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#femme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#grandparent"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#grandparent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#grandparent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#grandparent -->
+    <!-- http://www.websymentique.dz/2/rtic#grandparent -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#grandparent">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#grandparent">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#grandpere -->
+    <!-- http://www.websymentique.dz/2/rtic#grandpere -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#grandpere">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#grandparent"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/o#homme -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#homme">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/o#jeune -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#jeune">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/o#medcin -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#medcin">
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#metier"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/o#mere -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#mere">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#grandpere">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#femme"/>
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#grandparent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#homme"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#grandparent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#mereDeFilles -->
+    <!-- http://www.websymentique.dz/2/rtic#homme -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#mereDeFilles">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#homme">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.websymentique.dz/2/rtic#jeune -->
+
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#jeune">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.websymentique.dz/2/rtic#medcin -->
+
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#medcin">
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#metier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.websymentique.dz/2/rtic#mere -->
+
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#mere">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#mere"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#femme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#parent"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.websymentique.dz/2/rtic#mereDeFilles -->
+
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#mereDeFilles">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#mere"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#fille"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#mere"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#mere"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#metier -->
+    <!-- http://www.websymentique.dz/2/rtic#metier -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#metier"/>
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#metier"/>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#oncle -->
+    <!-- http://www.websymentique.dz/2/rtic#oncle -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#oncle">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#oncle">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#homme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#homme"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#frereSoeurDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#frereSoeurDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -422,161 +428,166 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#parent -->
+    <!-- http://www.websymentique.dz/2/rtic#parent -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parent">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#parent">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#personne"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#personne"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#parentNormal -->
+    <!-- http://www.websymentique.dz/2/rtic#parentNormal -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentNormal">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#parentNormal">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#parent"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:someValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#medcin"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#parentType -->
+    <!-- http://www.websymentique.dz/2/rtic#parentType -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentType">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#parentType">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#parent"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#etudiant"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#etudiant"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#parentchoye -->
+    <!-- http://www.websymentique.dz/2/rtic#parentchoye -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentchoye">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#parentchoye">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#parent"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                        <owl:allValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#parentheureux -->
+    <!-- http://www.websymentique.dz/2/rtic#parentheureux -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#parentheureux">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#parentheureux">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#parent"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                        <owl:allValuesFrom rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                        <owl:allValuesFrom rdf:resource="http://www.websymentique.dz/2/rtic#medcin"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#pere -->
+    <!-- http://www.websymentique.dz/2/rtic#pere -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#pere">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#pere">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#homme"/>
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#parent"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#homme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#parent"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#parent"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#parent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#pereDeFamilleNombrouse -->
+    <!-- http://www.websymentique.dz/2/rtic#pereDeFamilleNombrouse -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#pereDeFamilleNombrouse">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#pereDeFamilleNombrouse">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#pere"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#pere"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#pereType -->
+    <!-- http://www.websymentique.dz/2/rtic#pereType -->
 
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#pereType">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-msila.dz/11/o#parentDe"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.univ-msila.dz/11/o#fils"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#pere"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/o#personne -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#personne"/>
-    
-
-
-    <!-- http://www.univ-msila.dz/11/o#soeur -->
-
-    <owl:Class rdf:about="http://www.univ-msila.dz/11/o#soeur">
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#pereType">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#femme"/>
-                    <rdf:Description rdf:about="http://www.univ-msila.dz/11/o#fraterie"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#pere"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.websymentique.dz/2/rtic#fils"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <rdfs:subClassOf rdf:resource="http://www.univ-msila.dz/11/o#fraterie"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#pere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.websymentique.dz/2/rtic#personne -->
+
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#personne"/>
+    
+
+
+    <!-- http://www.websymentique.dz/2/rtic#soeur -->
+
+    <owl:Class rdf:about="http://www.websymentique.dz/2/rtic#soeur">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#femme"/>
+                    <rdf:Description rdf:about="http://www.websymentique.dz/2/rtic#fraterie"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.websymentique.dz/2/rtic#fraterie"/>
     </owl:Class>
     
 
@@ -592,149 +603,233 @@
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#ahmed -->
+    <!-- http://www.websymentique.dz/2/rtic#ahmed -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#ahmed">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-        <o:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/o#rokaya"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#ahmed">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:estMarieAvec rdf:resource="http://www.websymentique.dz/2/rtic#rokaya"/>
         <o:nom>ahmed</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#amel -->
+    <!-- http://www.websymentique.dz/2/rtic#amel -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#amel">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#etudiant"/>
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#ahmed"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#amel">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#etudiant"/>
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#estMarieAvec"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#ahmed"/>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#dounia -->
+    <!-- http://www.websymentique.dz/2/rtic#dounia -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#dounia">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <o:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/o#karim"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#dounia">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:estMarieAvec rdf:resource="http://www.websymentique.dz/2/rtic#karim"/>
         <o:nom>dounia</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#farid -->
+    <!-- http://www.websymentique.dz/2/rtic#farid -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#farid">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#etudiant"/>
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#karim"/>
-        <o:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/o#halima"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#farid">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#etudiant"/>
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#karim"/>
+        <o:estMarieAvec rdf:resource="http://www.websymentique.dz/2/rtic#halima"/>
         <o:nom>farid</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#hala -->
+    <!-- http://www.websymentique.dz/2/rtic#hala -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#hala">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <o:estMarieAvec rdf:resource="http://www.univ-msila.dz/11/o#samir"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#hala">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:estMarieAvec rdf:resource="http://www.websymentique.dz/2/rtic#samir"/>
         <o:nom>hala</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#halima -->
+    <!-- http://www.websymentique.dz/2/rtic#halima -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#halima">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#halima">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
         <o:nom>halima</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#karim -->
+    <!-- http://www.websymentique.dz/2/rtic#karim -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#karim">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#ahmed"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#rokaya"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#karim">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#ahmed"/>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#rokaya"/>
         <o:nom>karim</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#rokaya -->
+    <!-- http://www.websymentique.dz/2/rtic#rokaya -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#rokaya">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#rokaya">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
         <o:nom>rokaya</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#salim -->
+    <!-- http://www.websymentique.dz/2/rtic#salim -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#salim">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#etudiant"/>
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#karim"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#salim">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#etudiant"/>
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#medcin"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#estMarieAvec"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#karim"/>
         <o:nom>salim</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#samia -->
+    <!-- http://www.websymentique.dz/2/rtic#samia -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#samia">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#samir"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#samia">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#estMarieAvec"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#samir"/>
         <o:nom>samia</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#samir -->
+    <!-- http://www.websymentique.dz/2/rtic#samir -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#samir">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#homme"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#ahmed"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#rokaya"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#samir">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#homme"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#parentDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#ahmed"/>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#rokaya"/>
         <o:nom>samir</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#selma -->
+    <!-- http://www.websymentique.dz/2/rtic#selma -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#selma">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#samia"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#selma">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#medcin"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#estMarieAvec"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#samia"/>
         <o:nom>selma</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</o:personneAge>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-msila.dz/11/o#widad -->
+    <!-- http://www.websymentique.dz/2/rtic#widad -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-msila.dz/11/o#widad">
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#femme"/>
-        <rdf:type rdf:resource="http://www.univ-msila.dz/11/o#medcin"/>
-        <o:enfantDe rdf:resource="http://www.univ-msila.dz/11/o#samia"/>
+    <owl:NamedIndividual rdf:about="http://www.websymentique.dz/2/rtic#widad">
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#femme"/>
+        <rdf:type rdf:resource="http://www.websymentique.dz/2/rtic#medcin"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.websymentique.dz/2/rtic#estMarieAvec"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <o:enfantDe rdf:resource="http://www.websymentique.dz/2/rtic#samia"/>
         <o:nom>widad</o:nom>
         <o:personneAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</o:personneAge>
     </owl:NamedIndividual>
@@ -749,13 +844,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.univ-msila.dz/11/OwsOntologie#x">
+    <rdf:Description rdf:about="http://www.websymentique.dz/2/rticwsOntologie#x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-msila.dz/11/OwsOntologie#y">
+    <rdf:Description rdf:about="http://www.websymentique.dz/2/rticwsOntologie#y">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-msila.dz/11/OwsOntologie#z">
+    <rdf:Description rdf:about="http://www.websymentique.dz/2/rticwsOntologie#z">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
@@ -769,9 +864,9 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.univ-msila.dz/11/o#enfantDe"/>
-                        <swrl:argument1 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#x"/>
-                        <swrl:argument2 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.websymentique.dz/2/rtic#enfantDe"/>
+                        <swrl:argument1 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#x"/>
+                        <swrl:argument2 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -780,9 +875,9 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.univ-msila.dz/11/o#enfantDe"/>
-                                <swrl:argument1 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#z"/>
-                                <swrl:argument2 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#y"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.websymentique.dz/2/rtic#enfantDe"/>
+                                <swrl:argument1 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#z"/>
+                                <swrl:argument2 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -791,8 +886,8 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                                        <swrl:argument1 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#x"/>
-                                        <swrl:argument2 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#z"/>
+                                        <swrl:argument1 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#x"/>
+                                        <swrl:argument2 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#z"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -808,9 +903,9 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.univ-msila.dz/11/o#frereSoeurDe"/>
-                        <swrl:argument1 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#x"/>
-                        <swrl:argument2 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.websymentique.dz/2/rtic#frereSoeurDe"/>
+                        <swrl:argument1 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#x"/>
+                        <swrl:argument2 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -828,9 +923,9 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.univ-msila.dz/11/o#personneAge"/>
-                        <swrl:argument1 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#x"/>
-                        <swrl:argument2 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.websymentique.dz/2/rtic#personneAge"/>
+                        <swrl:argument1 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#x"/>
+                        <swrl:argument2 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -843,7 +938,7 @@
                                 <swrl:arguments>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#y"/>
+                                        <rdf:first rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#y"/>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -866,8 +961,8 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.univ-msila.dz/11/o#jeune"/>
-                        <swrl:argument1 rdf:resource="http://www.univ-msila.dz/11/OwsOntologie#x"/>
+                        <swrl:classPredicate rdf:resource="http://www.websymentique.dz/2/rtic#jeune"/>
+                        <swrl:argument1 rdf:resource="http://www.websymentique.dz/2/rticwsOntologie#x"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

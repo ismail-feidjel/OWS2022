@@ -1,20 +1,54 @@
-les nom des etudents------------------------------------------
+
+
+
+les nom des novaux de ahmed------------------------------------------
+
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX o: <http://www.univ-msila.dz/11/o#>
-SELECT ?nom
-	WHERE 
-	{ 
-	?uti rdf:type o:etudiant .
-	?uti o:nom ?nom
+SELECT      ?nom  
+
+	 WHERE { 
+	?uriAhmed o:nom "ahmed".
+	?uriEnfant o:enfantDe ?uriAhmed.
+	?uriEnfant o:nom ?nom
 	}
 
 
-les nom des novaux de ahmed------------------------------------------
+2-------les nom des parents ayont au moin deux enfants------------------------------------------
+by -------1--------(general method)
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT     ?nom  ?parent(COUNT(*) AS ?count_enfants)
 
+	 WHERE { ?enfant o:enfantDe ?parent . 
+		?parent o:nom ?nom}
+	 GROUP BY ?parent ?nom
+ 	having (?count_enfants >= 2)
+
+or-----2------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT distinct     ?nom  
+
+	 WHERE { 
+	?enfant1 o:enfantDe ?parent . 
+	?enfant2 o:enfantDe ?parent . 
+	?parent o:nom ?nom.
+	filter(?enfant1 != ?enfant2)}
+	
+
+3-----les nom des oncle de selma------------------------------------------
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -32,43 +66,10 @@ SELECT distinct  ?nom
 
 	filter(?parent !=?oncle)	
 	 }
-
-
-les nom des parents ayont au moin deux enfants------------------------------------------
-
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX o: <http://www.univ-msila.dz/11/o#>
-SELECT     ?nom  ?parent(COUNT(*) AS ?count_enfants)
-
-	 WHERE { ?enfant o:enfantDe ?parent . 
-		?parent o:nom ?nom}
-	 GROUP BY ?parent ?nom
- 	having (?count_enfants >= 2)
-	
-
-les nom des oncle de samia------------------------------------------
-
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX o: <http://www.univ-msila.dz/11/o#>
-SELECT distinct  ?d
-
-	 WHERE { o:samia o:enfantDe ?b .
-	?d rdf:type o:homme .
-	?b o:enfantDe ?c .
-	?d o:enfantDe ?c .
-	filter(?b!=?d)	
-	 }
 	
 
 
-les nom des cosin les casin de samia------------------------------------------
-
+4---------------------les nom des cosin les casin de samia-----------------------------
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -85,3 +86,16 @@ SELECT distinct  ?nom
 
 	filter(?parent !=?oncle)	
 	 }
+5------------------------- les nom des etudents------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX o: <http://www.univ-msila.dz/11/o#>
+SELECT ?nom
+	WHERE 
+	{ 
+	?uti rdf:type o:etudiant .
+	?uti o:nom ?nom
+	}
